@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     public void Start()
     {
         touchEndPos = this.transform.position;
+        var agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
     public void Update()
     {
