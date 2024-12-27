@@ -8,13 +8,14 @@ public class PlayerController : MonoBehaviour
     public Vector2 touchEndPos;
     public Touch touch;
     public bool CanMove;
+    public UnityEngine.AI.NavMeshAgent navMeshAgent;
     
     public void Start()
     {
         touchEndPos = this.transform.position;
-        var agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
+        navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updateUpAxis = false;
     }
     public void Update()
     {
@@ -24,8 +25,9 @@ public class PlayerController : MonoBehaviour
             CanMove = true;
         }
         if(CanMove == true)
-        {
-            transform.position = Vector2.MoveTowards(this.transform.position, touchEndPos, 0.9f * Time.deltaTime);
+        {   
+            navMeshAgent.destination = touchEndPos;
+            //transform.position = Vector2.MoveTowards(this.transform.position, touchEndPos, 0.9f * Time.deltaTime);
             if(this.transform.position.x == touchEndPos.x && this.transform.position.y == touchEndPos.y)
             {
                 CanMove = false;
