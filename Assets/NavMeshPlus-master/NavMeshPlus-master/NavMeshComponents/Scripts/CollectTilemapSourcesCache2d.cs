@@ -5,9 +5,10 @@ using UnityEngine.AI;
 using UnityEngine.Tilemaps;
 
 namespace NavMeshPlus.Extensions
-{
+{   
+    /*
     [ExecuteAlways]
-    [AddComponentMenu("Navigation/Navigation CacheTilemapSources2d", 30)]
+    [AddComponentMenu("Navigation/Navigation CacheTilemapSources2d", 30)] 
     public class CollectTilemapSourcesCache2d : NavMeshExtension
     {
         [SerializeField] private Tilemap _tilemap;
@@ -84,5 +85,5 @@ namespace NavMeshPlus.Extensions
             Tilemap.tilemapTileChanged -= OnTilemapTileChanged;
             base.OnDestroy();
         }
-    }
+    }*/
 }
