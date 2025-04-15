@@ -12,4 +12,5 @@ public class Menu : MonoBehaviour
         StartCutScene.Play();
         Destroy(this.gameObject);
     }
+    
 }
