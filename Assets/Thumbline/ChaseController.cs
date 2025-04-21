@@ -62,6 +62,11 @@ public class ChaseController : MonoBehaviour
     {
         if(other.gameObject.tag == "Boloto")
         {
+           ThumbAnimator.SetTrigger("Die");
+           StartCoroutine("Die");
+        }
+        if(other.gameObject.tag == "Jaba")
+        {
             SceneManager.LoadScene(3);
         }
     }
@@ -71,5 +76,11 @@ public class ChaseController : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+    IEnumerator Die()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(3);
+        
     }
 }
