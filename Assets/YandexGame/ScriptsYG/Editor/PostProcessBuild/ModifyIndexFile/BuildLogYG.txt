@@ -1,2 +1,2 @@
 Build path: /Users/alexandermiheev/Documents/Дюймовочка/Builds/Build4
-Build number: 6
+Build number: 7
