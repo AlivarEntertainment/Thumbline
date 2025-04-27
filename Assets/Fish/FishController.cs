@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 public class FishController : MonoBehaviour
 {   
     [Header("Base")]
     public Animator FishAnim;
-    public bool IsRaftStyle;
+    public bool FacingRight;
     [Space]
     [Header("MoveRaft")]
     public Vector3 direction;
@@ -14,32 +15,17 @@ public class FishController : MonoBehaviour
     public float speed;
     float ver;
     public float turnSpeed;
-    [Space]
-    [Header("TiltAx")]
-    public bool FacingRight;
-    public bool NeedToTilt = false;
-    public bool TiltCorStart;
+    public TextMeshProUGUI SpeedText;
+   
     void Start()
     {
-        StartCoroutine(ChangeMode());
-    }
+       StartCoroutine("AddSpeed");
+    }   
 
     // Update is called once per frame
     void FixedUpdate()
     {   
-        if(IsRaftStyle == true)
-        {
-            RaftStyle();
-        }
-        else if(IsRaftStyle == false)
-        {
-            BubbleCoinStyle();
-            if(TiltCorStart == true)
-            {
-                StartCoroutine("TiltCor");
-            }
-            
-        }
+        RaftStyle();
     }
     
     public void RaftStyle()
@@ -70,63 +56,22 @@ public class FishController : MonoBehaviour
             FishAnim.SetBool("MoveL", false);
         }
     }
-    public void BubbleCoinStyle()
-    {
-        Vector3 acceleration = Input.acceleration;
-        
-        if(NeedToTilt == true)
-        {
-            if(FacingRight == true)
-            {
-                if(acceleration.y > 1f)
-                {
-                    NeedToTilt = false;
-                }
-            }
-            else
-            {
-                if(acceleration.y < 1f)
-                {
-                    NeedToTilt = false;
-                }
-            }
-        }
-    }
-    IEnumerator TiltCor()
-    {   
-        TiltCorStart = false;
-        for(int i = 0; i <= 6; i++)
-        {
-            yield return new WaitForSeconds(6f);
-            Flip();
-            FishAnim.SetTrigger("Tilt");
-            NeedToTilt = true;
-            StartCoroutine(DieNotTilting());
-        }
-    }
-    IEnumerator DieNotTilting()
-    {
-        yield return new WaitForSeconds(4f);
-        if(NeedToTilt == true)
-        {
-            SceneManager.LoadScene(4);
-        }
-    }
-    IEnumerator ChangeMode()
-    {
-        for(int z = 0; z <= 4; z++)
-        {   
-            yield return new WaitForSeconds(15f);
-            IsRaftStyle = !IsRaftStyle;
-            TiltCorStart = true;
-        }
-    }
+   
     public void Flip()
     {
         FacingRight = !FacingRight;
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+    public IEnumerator AddSpeed()
+    {
+        for(int i = 0; i < 15; i++)
+        {
+            yield return new WaitForSeconds(3);
+            direction.y += 2;
+            SpeedText.text = direction.y.ToString();
+        }
     }
     public void OnTriggerEnter2D(Collider2D other)
     {

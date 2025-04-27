@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ChangeToChase : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int SceneToCahnge;
     void Start()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(SceneToCahnge);
     }
 
    
