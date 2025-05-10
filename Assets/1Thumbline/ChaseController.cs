@@ -9,6 +9,8 @@ public class ChaseController : MonoBehaviour
     public Animator ThumbAnimator;
      public Vector2 target;
      public bool FacingRight;
+     public GameObject LiliysSpawnerObj;
+     public bool CanMove = true;
      public void FixedUpdate()
      {  
         var step =  3 * Time.deltaTime;
@@ -24,7 +26,7 @@ public class ChaseController : MonoBehaviour
      }
     public void OnRightButtonClick()
     {
-        if(transform.position.x <= 0f && IsMoving == false)
+        if(transform.position.x <= 0f && IsMoving == false && CanMove == true)
         {   
             if(FacingRight == false)
             {
@@ -37,7 +39,7 @@ public class ChaseController : MonoBehaviour
     }
     public void OnLeftButtonClick()
     {
-        if(transform.position.x >= 0f && IsMoving == false)
+        if(transform.position.x >= 0f && IsMoving == false && CanMove == true)
         {   
             if(FacingRight == true)
             {
@@ -50,7 +52,7 @@ public class ChaseController : MonoBehaviour
     }
     public void OnForwardButtonClick()
     {   
-        if(IsMoving == false)
+        if(IsMoving == false && CanMove == true)
         {
             ThumbAnimator.SetTrigger("UpJump");
         IsMoving = true;
@@ -66,7 +68,9 @@ public class ChaseController : MonoBehaviour
            StartCoroutine("Die");
         }
         if(other.gameObject.tag == "Jaba")
-        {
+        {   
+            Destroy(other.gameObject);
+            Destroy(LiliysSpawnerObj);
             SceneManager.LoadScene(3);
         }
     }
@@ -78,7 +82,8 @@ public class ChaseController : MonoBehaviour
         transform.localScale = Scaler;
     }
     IEnumerator Die()
-    {
+    {   
+        CanMove = false;
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(3);
         

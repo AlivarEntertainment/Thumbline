@@ -19,14 +19,15 @@ public class DialogueManager : MonoBehaviour
     public bool JabiDial;
     public int Seconds;
     public GameObject ButtonStart;
-    private void Start()
+    public void Start()
     {
         sentences = new Queue<string>();
+       // startAnim.SetBool("Veiw", true);
     }
     public void StartDialogue(Dialogue dialogue)
     {
         boxAnim.SetBool("boxOpen", true);
-        //startAnim.SetBool("startOpen", false);
+        startAnim.SetBool("startOpen", false);
 
         //nameText.text = dialogue.name;
         if(SecondDial == false)
@@ -59,7 +60,7 @@ public class DialogueManager : MonoBehaviour
                 
                 nameText.text = "Ласточка Ольга";
                 SecondDial = true;
-                //startAnim.SetBool("startOpen", false);
+                startAnim.SetBool("startOpen", false);
             }
             else if(JabiDial == true){
                 ButtonStart.SetActive(false);
@@ -70,7 +71,7 @@ public class DialogueManager : MonoBehaviour
             
             EndDialogue();
         }
-        if(CurrentSent == 12)
+        if(CurrentSent == 14)
         { 
             ThirdCutScene.Play();
             EndDialogue();
