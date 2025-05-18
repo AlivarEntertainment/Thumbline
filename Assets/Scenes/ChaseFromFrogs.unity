@@ -6226,8 +6226,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1896591634}
   m_Bounds:
-    m_Center: {x: -0.38804626, y: 0.3641348, z: 0}
-    m_Extent: {x: 2.6413438, y: 2.7325, z: 0}
+    m_Center: {x: -0.7706058, y: -0.032597303, z: 0}
+    m_Extent: {x: 1.9878094, y: 3.3414211, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -6964,8 +6964,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1141148628}
   m_Bounds:
-    m_Center: {x: 0.40427136, y: 0.34229922, z: 0}
-    m_Extent: {x: 2.6217752, y: 2.7568254, z: 0}
+    m_Center: {x: 0.70389366, y: 1.1761979, z: 0}
+    m_Extent: {x: 3.5514574, y: 1.8901752, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -7664,8 +7664,8 @@ MonoBehaviour:
   - {fileID: 225367734}
   - {fileID: 557940017}
   m_Bounds:
-    m_Center: {x: 0.002611637, y: -0.00093746185, z: 0}
-    m_Extent: {x: 3.7948465, y: 9.336561, z: 0}
+    m_Center: {x: 0.07058787, y: -0.015135765, z: 0}
+    m_Extent: {x: 3.80137, y: 9.32629, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -9148,6 +9148,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1484037023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484037024}
+  - component: {fileID: 1484037025}
+  m_Layer: 0
+  m_Name: FishFlow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1484037024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484037023}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.040000916, y: 2.1900005, z: 0}
+  m_LocalScale: {x: 0.39695, y: 0.49618998, z: 0.49618998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1745356177}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1484037025
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484037023}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 651eaae5fbefb468aaa2c9902826dfcb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.53333336}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1491992047
 GameObject:
   m_ObjectHideFlags: 0
@@ -10521,6 +10605,7 @@ Transform:
   - {fileID: 1954057051}
   - {fileID: 216276443}
   - {fileID: 736140393}
+  - {fileID: 1484037024}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10945,8 +11030,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 999875601}
   m_Bounds:
-    m_Center: {x: 0.08396244, y: 0.005899906, z: 0}
-    m_Extent: {x: 2.52274, y: 5.9946957, z: 0}
+    m_Center: {x: -0.9095626, y: -0.11280966, z: 0}
+    m_Extent: {x: 3.2316585, y: 6.1285725, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
