@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Playables;
+
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
@@ -17,10 +18,16 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     public bool SecondDial;
     public bool JabiDial;
+    public bool IsLasto4ka;
     public int Seconds;
     public GameObject ButtonStart;
+    [Header("Speaker")]
+    public string[] SpeakerName;
+    public int CurName = 0;
+    public TextMeshProUGUI StartSpeekText;
     public void Start()
-    {
+    {   
+        nameText.text = SpeakerName[CurName];
         sentences = new Queue<string>();
        // startAnim.SetBool("Veiw", true);
     }
@@ -37,7 +44,7 @@ public class DialogueManager : MonoBehaviour
             {
                 sentences.Enqueue(sentence);
             }
-            nameText.text = dialogue.name;
+            //nameText.text = dialogue.name;
         }
         
         DisplayNextSentence();
@@ -45,33 +52,41 @@ public class DialogueManager : MonoBehaviour
     public void DisplayNextSentence()
     {   
         CurrentSent++;
+        CurName++;
+        nameText.text = SpeakerName[CurName];
         if(sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-        
-        if(CurrentSent == 5)
+        if(CurrentSent == 5 && IsLasto4ka == true)
+        {   
+            
+            SecondCutScene.Play();
+            EndDialogue();
+        }
+        if(CurrentSent == 7 && JabiDial == false && IsLasto4ka == false)
         {   
             CurrentSent += 2;
             
-            if(JabiDial == false)
-            {   
-                
-                nameText.text = "Ласточка Ольга";
-                SecondDial = true;
-                startAnim.SetBool("startOpen", false);
-            }
-            else if(JabiDial == true){
-                ButtonStart.SetActive(false);
-                StartCoroutine(ChangeAfterCutScene());
-                Debug.Log("54646");
-            }
+            StartSpeekText.text = "Поговорить с Ласточкой";
+            //nameText.text = "Ласточка Ольга";
+            SecondDial = true;
+            startAnim.SetBool("startOpen", false);
             SecondCutScene.Play();
+            EndDialogue();
             
+        }
+        if(CurrentSent == 6 && JabiDial == true)
+        {
+            
+            ButtonStart.SetActive(false);
+            StartCoroutine(ChangeAfterCutScene());
+            Debug.Log("54646");
+            SecondCutScene.Play();
             EndDialogue();
         }
-        if(CurrentSent == 14)
+        if(CurrentSent == 15)
         { 
             ThirdCutScene.Play();
             EndDialogue();

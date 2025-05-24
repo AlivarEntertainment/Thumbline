@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ZAfterFish.unity
     guid: f716ca8cfb90e4d689116ebc47fa7e51
   - enabled: 1
+    path: Assets/Scenes/ZZZForest.unity
+    guid: 4af9c754c1ecd456784015e75079c971
+  - enabled: 1
     path: Assets/Scenes/ZZCredits.unity
     guid: 4348fba123b2b4902922d423784b3695
   - enabled: 0

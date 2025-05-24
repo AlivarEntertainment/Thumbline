@@ -26,7 +26,7 @@ public class ChaseController : MonoBehaviour
      }
     public void OnRightButtonClick()
     {
-        if(transform.position.x <= 0f && IsMoving == false && CanMove == true)
+        if(transform.position.x <= 1.5f && IsMoving == false && CanMove == true)
         {   
             if(FacingRight == false)
             {
@@ -39,7 +39,7 @@ public class ChaseController : MonoBehaviour
     }
     public void OnLeftButtonClick()
     {
-        if(transform.position.x >= 0f && IsMoving == false && CanMove == true)
+        if(transform.position.x >= -1.5f && IsMoving == false && CanMove == true)
         {   
             if(FacingRight == true)
             {

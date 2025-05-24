@@ -7,10 +7,19 @@ using UnityEngine.Playables;
 public class Menu : MonoBehaviour
 {   
     public PlayableDirector StartCutScene;
+    public GameObject AboutPanel;
     public void OnStartButtonClick()
     {
         StartCutScene.Play();
         StartCoroutine("SelfDestroy");
+    }
+    public void OnAboutClick()
+    {
+        AboutPanel.SetActive(true);
+    }
+    public void OnAboutLeave()
+    {
+         AboutPanel.SetActive(false);
     }
     IEnumerator SelfDestroy()
     {

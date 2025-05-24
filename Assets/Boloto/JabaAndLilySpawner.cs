@@ -30,6 +30,10 @@ public class JabaAndLilySpawner : MonoBehaviour
            // FoundJabas.Clear(FoundJabas, FoundJabas[0]);
             Destroy(FoundLiliyes[FoundLiliyes.Length - 2]);
         }
+        /*if(CurScene == 4)
+        {
+            FoundJabas[FoundJabas.Length - 2].gameObject.transform.position = Vector2.Lerp(FoundJabas[FoundJabas.Length - 2].gameObject.transform.position, new Vector2(0, 19), 1);
+        }*/
         if(CurScene == 5)
         {
             for(int i = 0; i <= FoundLiliyes.Length; i++)
