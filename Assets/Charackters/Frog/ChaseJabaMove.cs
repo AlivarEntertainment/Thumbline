@@ -64,19 +64,10 @@ public class ChaseJabaMove : MonoBehaviour
         {   
             if(transform.position.y <= 15)
             {
-                yield return new WaitForSeconds(7f);
-            
-            if( Vector3.Distance(PlayerPos.position, transform.position) > 15)
-            {
-                targetJump = new Vector2(transform.position.x, transform.position.y + 10);
-                Debug.Log("BigJump");
-                JabaChase.SetTrigger("Jump");
-            }
-            else 
-            {   
+                yield return new WaitForSeconds(5.5f);
                 JabaChase.SetTrigger("Jump");
                 targetJump = new Vector2(transform.position.x, transform.position.y + 5);
-            }
+            
             }
             
             
