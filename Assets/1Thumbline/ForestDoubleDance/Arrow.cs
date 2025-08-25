@@ -5,9 +5,10 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {   
     public CollectorOfArrows Collector;
+    public float Speed = 450;
     public void FixedUpdate()
     {
-        transform.position += transform.up.normalized * 450 * Time.deltaTime;
+        transform.position += transform.up.normalized * Speed * Time.deltaTime;
         if(transform.localPosition.y > 950)
         {   
             Collector.Die();

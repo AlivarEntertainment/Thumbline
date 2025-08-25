@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 5103225520707098913}
   m_Layer: 0
   m_Name: Prepatstvie
-  m_TagString: Untagged
+  m_TagString: Muhomor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,8 +225,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6298690841707493563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.25, y: -0.38, z: 0}
+  m_LocalScale: {x: 0.76135, y: 0.76135, z: 0.76135}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8543049310269127586}
@@ -297,8 +297,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4825248, y: -0.21761814}
-  m_Size: {x: 2.2518618, y: 4.0851717}
+  m_Offset: {x: 0.1881512, y: -0.33083856}
+  m_Size: {x: 2.6594558, y: 3.858731}
   m_Direction: 0
 --- !u!1 &6855274778395657450
 GameObject:

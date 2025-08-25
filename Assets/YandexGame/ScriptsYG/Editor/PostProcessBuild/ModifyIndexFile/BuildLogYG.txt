@@ -1,2 +1,2 @@
-Build path: /Users/alexandermiheev/Documents/Дюймовочка/Builds/ThumbelinaFinal
-Build number: 22
+Build path: /Users/alexandermiheev/Documents/Дюймовочка/Builds/ThumbelinaPartTwo
+Build number: 26

@@ -11,7 +11,7 @@ public class CollectorOfArrows : MonoBehaviour
     int RemoveAble;
     public Animator DanceAnim;
     public GameObject RedLine;
-    
+    public ArrowSpawn Spawner;
     //public GameObject BadParticle;
     public void Push()
     {   
@@ -46,6 +46,7 @@ public class CollectorOfArrows : MonoBehaviour
             Destroy(ArrowList[RemoveAble].gameObject);
             ArrowList[RemoveAble] = null;
             DanceAnim.SetTrigger("Fail");
+            Spawner.failCount+=0.1f;
         }
         RefreshListTest();
     }
@@ -60,6 +61,8 @@ public class CollectorOfArrows : MonoBehaviour
         Destroy(ArrowList[0].gameObject);
         ArrowList[0] = null;
         RefreshListTest();
+        Spawner.failCount+= 0.1f;
+        Spawner.CullDown-=0.1f;
          //BadParticle.SetActive(false);
         //adParticle.SetActive(true);
     }

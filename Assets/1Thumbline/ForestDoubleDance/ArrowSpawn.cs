@@ -8,7 +8,10 @@ public class ArrowSpawn : MonoBehaviour
     public GameObject[] Arrows;
     public CollectorOfArrows[] Collectors;
     public Transform ArrowParent;
-    //public Arrow SpawnedArrow;
+    public float failCount;
+    public Arrow SpawnedArrow;
+    public float CullDown;
+    public GameObject FinalCutScene;
     //public Transform[] BestPos;
 
     public void Start()
@@ -19,12 +22,16 @@ public class ArrowSpawn : MonoBehaviour
     {
         for(int i = 0; i < 30; i++)
         {   
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(CullDown);
             int CurrentRandom = Random.Range(0, 4);
             Debug.Log(CurrentRandom);
             GameObject Spawned = Instantiate(Arrows[CurrentRandom], ArrowSpawns[CurrentRandom].position, Quaternion.identity, ArrowParent);
+            SpawnedArrow = Spawned.gameObject.GetComponent<Arrow>();
+            SpawnedArrow.Speed *= 1 + failCount;
             Collectors[CurrentRandom].ArrowList.Add(Spawned.gameObject); 
-            Spawned.GetComponent<Arrow>().Collector = Collectors[CurrentRandom];
+            SpawnedArrow.Collector = Collectors[CurrentRandom];
         }
+        yield return new WaitForSeconds(10);
+        FinalCutScene.SetActive(true);
     }
 }

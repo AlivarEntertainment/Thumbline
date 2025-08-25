@@ -21,11 +21,13 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
-    ignoreMasterTextureLimit: 0
+    ignoreMipmapLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -88,7 +90,6 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
@@ -836,7 +837,6 @@ ScriptedImporter:
     - {x: 62, y: 63}
     - {x: 63, y: 64}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 704, y: 4}
     spritePosition: {x: 920, y: 2677}
   - name: "\u0421\u043B\u043E\u0439 3"
@@ -1122,7 +1122,6 @@ ScriptedImporter:
     - {x: 21, y: 22}
     - {x: 22, y: 23}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1043, y: 1694}
     spritePosition: {x: 1473, y: 2913}
   - name: "\u0421\u043B\u043E\u0439 2"
@@ -1408,7 +1407,6 @@ ScriptedImporter:
     - {x: 21, y: 22}
     - {x: 22, y: 23}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 988, y: 1694}
     spritePosition: {x: 1308, y: 2916}
   - name: "\u0421\u043B\u043E\u0439 1"
@@ -1815,7 +1813,6 @@ ScriptedImporter:
     - {x: 32, y: 33}
     - {x: 33, y: 34}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 704, y: 1838}
     spritePosition: {x: 1193, y: 2827}
   - name: Hand
@@ -2198,7 +2195,6 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1709, y: 1373}
     spritePosition: {x: 1142, y: 1283}
   - name: ArmUp
@@ -2581,7 +2577,6 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 460, y: 1339}
     spritePosition: {x: 969, y: 1954}
   - name: ArmLow
@@ -3006,7 +3001,6 @@ ScriptedImporter:
     - {x: 32, y: 33}
     - {x: 33, y: 34}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 704, y: 1213}
     spritePosition: {x: 969, y: 1425}
   - name: Dress
@@ -3475,7 +3469,6 @@ ScriptedImporter:
     - {x: 36, y: 37}
     - {x: 37, y: 38}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 920, y: 1309}
   - name: Hand2
@@ -3935,7 +3928,6 @@ ScriptedImporter:
     - {x: 36, y: 37}
     - {x: 37, y: 38}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1854, y: 538}
     spritePosition: {x: 1741, y: 1508}
   - name: ArmLow
@@ -4329,7 +4321,6 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1466, y: 4}
     spritePosition: {x: 1499, y: 1616}
   - name: ArmUp
@@ -4712,7 +4703,6 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1466, y: 1412}
     spritePosition: {x: 1396, y: 2064}
   - name: LegSuperUp
@@ -5447,7 +5437,6 @@ ScriptedImporter:
     - {x: 61, y: 62}
     - {x: 62, y: 63}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 4, y: 1339}
     spritePosition: {x: 833, y: 912}
   - name: "\u0421\u043A\u0430\u043D 5"
@@ -5808,7 +5797,6 @@ ScriptedImporter:
     - {x: 27, y: 28}
     - {x: 28, y: 29}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 4, y: 1845}
     spritePosition: {x: 1029, y: 268}
   - name: LegDown
@@ -6169,7 +6157,6 @@ ScriptedImporter:
     - {x: 27, y: 28}
     - {x: 28, y: 29}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 988, y: 1213}
     spritePosition: {x: 1027, y: 369}
   - name: LegUp
@@ -6541,7 +6528,6 @@ ScriptedImporter:
     - {x: 28, y: 29}
     - {x: 29, y: 30}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1793, y: 4}
     spritePosition: {x: 988, y: 715}
   - name: LegSuperUp
@@ -7298,7 +7284,6 @@ ScriptedImporter:
     - {x: 63, y: 64}
     - {x: 64, y: 65}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 704, y: 707}
     spritePosition: {x: 1140, y: 925}
   - name: "\u0421\u043A\u0430\u043D 5"
@@ -7659,7 +7644,6 @@ ScriptedImporter:
     - {x: 27, y: 28}
     - {x: 28, y: 29}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1709, y: 1636}
     spritePosition: {x: 1336, y: 281}
   - name: LegDown
@@ -8031,7 +8015,6 @@ ScriptedImporter:
     - {x: 28, y: 29}
     - {x: 29, y: 30}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1709, y: 892}
     spritePosition: {x: 1334, y: 382}
   - name: LegUp
@@ -8414,7 +8397,6 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1466, y: 892}
     spritePosition: {x: 1295, y: 728}
   - name: "\u0428\u0435\u044F"
@@ -8841,7 +8823,6 @@ ScriptedImporter:
     - {x: 33, y: 34}
     - {x: 34, y: 35}
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 1466, y: 538}
     spritePosition: {x: 1107, y: 2504}
   characterData:
@@ -9200,6 +9181,7 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   sharedRigSpriteImportData: []
   sharedRigCharacterData:
@@ -9207,6 +9189,7 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   platformSettings: []
   mosaicLayers: 1
@@ -9219,6 +9202,10 @@ ScriptedImporter:
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
   spriteCategoryList:
     categories: []
   spritePackingTag: 
@@ -9477,6 +9464,9 @@ ScriptedImporter:
     isVisible: 0
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 
   prefabAssetName: 
