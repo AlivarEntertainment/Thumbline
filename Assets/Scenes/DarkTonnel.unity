@@ -514,7 +514,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 152639152}
-  - component: {fileID: 152639151}
   m_Layer: 0
   m_Name: MousePivot
   m_TagString: Untagged
@@ -522,18 +521,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!210 &152639151
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152639150}
-  m_Enabled: 1
-  m_SortingLayerID: 1735455599
-  m_SortingLayer: 1
-  m_SortingOrder: 1
-  m_SortAtRoot: 0
 --- !u!4 &152639152
 Transform:
   m_ObjectHideFlags: 0
@@ -1904,7 +1891,7 @@ Animator:
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1954,6 +1941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 529336978}
   - component: {fileID: 529336977}
+  - component: {fileID: 529336979}
   m_Layer: 0
   m_Name: m&D
   m_TagString: Untagged
@@ -1999,6 +1987,18 @@ Transform:
   - {fileID: 1982011713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &529336979
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529336976}
+  m_Enabled: 1
+  m_SortingLayerID: 1735455599
+  m_SortingLayer: 1
+  m_SortingOrder: 3
+  m_SortAtRoot: 0
 --- !u!1 &546744299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3339,7 +3339,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2c36dbf799dd24003b981b89e18b816a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -4078,7 +4078,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 2c36dbf799dd24003b981b89e18b816a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
