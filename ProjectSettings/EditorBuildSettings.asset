@@ -41,6 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DarkTonnel.unity
     guid: 686c1f54b4623440eb6b864bf963af15
+  - enabled: 1
+    path: Assets/Scenes/MoleBattles.unity
+    guid: 8a0137783bac5439080bdffeee0c3933
+  - enabled: 1
+    path: Assets/Scenes/TonnelAfterMole.unity
+    guid: edf637f3cedf843c2a47f08cfe5a92f8
   - enabled: 0
     path: Assets/Scenes/ZZCredits.unity
     guid: 4348fba123b2b4902922d423784b3695
