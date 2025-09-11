@@ -21,6 +21,7 @@ public class MoleController : MonoBehaviour
     public Sprite[] Walls;
     public SpriteRenderer WallRenderer;
     public BoxCollider2D ColliderWall;
+    public Animator SliderAnim;
     [Header("Arrow")]
     public GameObject Arrow;
     public Vector3 ArrowDirection;
@@ -130,6 +131,7 @@ public class MoleController : MonoBehaviour
             {
                 WallRenderer.sprite = Walls[2];
                 ColliderWall.enabled = false;
+                SliderAnim.SetTrigger("Die");
             }
         }
     }
